@@ -1,0 +1,73 @@
+/*------------INVISIBLES-------------*/
+a:link, a:visited, a:active { /* https://www.adaweb.es/eliminar-subrayado-enlaces-css/ */
+    text-decoration:none;
+}
+
+body {
+    margin-top: 2%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 2%;
+}
+
+.menu, .sidebar{
+    display: none;
+}
+
+/*------------CABECERA-------------*/
+
+.header div{
+    display: block;
+    text-align: center;
+}
+
+.titulo{
+    line-height: 0px; /* https://stackoverflow.com/questions/28803227/moving-header-down-in-css*/
+    font-size: 200%;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#logo{
+    padding: 1rem 1rem;
+    border: 3px solid #000000;
+    border-radius: 20%;
+    height: 75px;
+    width: 75px;
+}
+
+/*------------ARTÍCULO-------------*/
+
+.fotos img{
+    width: 14em;
+    display: block;
+    margin: 10px;
+}
+
+.content .fotos{
+    float: left;
+    margin-top: em;
+}
+
+article{
+    font-family: 'Courier New', Courier, monospace;
+    margin: 30px;
+}
+
+article h3{
+    font-size: 170%;
+}
+
+article h4{
+    font-size: 150%;
+}
+
+article p{
+    font-size: 100%;
+}
+
+/*------------PIE-------------*/
+
+.footer   {
+    text-align: center;
+}

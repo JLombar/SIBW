@@ -1,0 +1,254 @@
+a:link, a:visited, a:active { /* https://www.adaweb.es/eliminar-subrayado-enlaces-css/ */
+    text-decoration:none;
+}
+
+body {
+    margin: 30px;
+}
+
+/*--------------GRID DEL CUERPO--------------*/ 
+.sidebar {
+    grid-area: sidebar;
+}
+
+.content {
+    grid-area: content;
+}
+
+.header {
+    grid-area: header;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.wrapper {
+    background-color: rgb(26, 31, 48);
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-areas:
+    "header"
+    "sidebar"
+    "content"
+    "footer"
+}
+
+@media only screen and (min-width: 500px)  {
+.wrapper {
+
+    grid-template-columns: 20% auto;
+    grid-template-areas:
+    "header   header"
+    "sidebar  content"
+    "footer   footer";
+}
+}
+
+@media only screen and (min-width: 600px)   {
+    .wrapper {
+    grid-gap: 20px;
+    grid-template-columns: 120px auto 25%;
+    grid-template-areas:
+    "header  header  header"
+    "content content sidebar"
+    "footer  footer  footer";
+    max-width: 100%;
+    }
+}
+
+/*--------------CABECERA--------------*/
+.header  {
+    background-color: rgb(0, 6, 24);
+    border: 2px solid #bed3ff;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#logo{
+    padding: 1rem 1rem;
+    background-color: #4e6b83;
+    border-radius: 20px;
+    float: left;
+    border: 3px solid #bed3ff;
+    height: 150px;
+    width: 150px;
+}
+
+#logo:hover{
+    background-color: #cfeeff;
+    transition: all 0.2s;
+}
+
+.titulo{
+    display: block;
+    line-height: 125px; /* https://stackoverflow.com/questions/28803227/moving-header-down-in-css*/
+    text-align: center;
+    color: #bed3ff;
+    font-family: Impact;
+    font-size: 350%;
+}
+
+.titulo:hover{
+    color: #cfeeff;
+    transition: all 0.2s;
+}
+
+/*--------------CABECERA/BOTONES/SOCIAL--------------*/
+
+.menu {
+    text-align: center;
+    padding: 0.0em;
+}
+
+.menu li {  /* https://www.w3schools.com/css/css_list.asp */ 
+    background: #4e6b83;
+    color: #bed3ff;
+    font-family: "Arial";
+} 
+
+.menu li:hover{
+    background: rgb(0, 6, 24);
+    color: #02b9d1;
+}
+
+.boton {
+	border: 3px solid #bed3ff;
+	border-radius: 50px;
+    padding: 0.8rem 2rem;
+    margin: 20px;
+    display: inline-flex;
+    font-weight: bolder;
+}
+
+.boton:hover {
+    border-color: #02b9d1;
+    border-radius: 10px;
+    transition: all 0.2s;
+    margin: 0px;
+    padding: 0.8rem 3rem;
+}
+
+/*--------------CUERPO--------------*/
+
+.content   {
+    background-color: #4e6b83;
+    color: #fff;
+    border: 2px solid #bed3ff;
+    border-radius: 5px; 
+    padding: 10px;
+}
+
+.box {
+    background-color: #444;
+    color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 150%;
+    border: 2px solid #bed3ff;
+    text-align: center;
+}
+
+.box:nth-child(even) {
+    background-color: #afafaf;
+    color: #000;
+}
+
+.box:hover{
+    background-color: rgb(0, 6, 24);
+    transition: all 0.2s;
+    border-radius: 20px;
+}
+
+.cientif {
+    justify-items: center;
+    width: 45%;
+    height: 45%;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(3, 72%);
+    grid-template-rows: repeat(2, 430px);
+    grid-auto-flow: row;
+}
+
+.cientif img{
+    display: flex;
+    height: 300px;
+    width: 14em;
+    border-radius: 5%;
+}
+
+.cientif span{
+    line-height: 100px;
+    color: white;
+}
+
+/*--------------BARRA LATERAL--------------*/
+
+.sidebar   {
+    background-color: #4e6b83;
+    color: #fff;
+    border: 2px solid #bed3ff;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: larger;
+}
+
+.sidebar li{
+    color: rgb(255, 255, 255);
+    text-align: left;
+    font-family: "Arial";
+    padding: 0.2rem;
+    line-height: 2;
+}
+
+.sidebar li:hover{
+    color: #02b9d1;
+    font-size: 110%;
+    transition: all 0.2s;
+}
+
+/*--------------ARTÍCULO--------------*/
+
+.fotos img{
+    width: 16em;
+    display: block;
+    margin: 10px;
+}
+
+.content .fotos{
+    float: right;
+    margin-top: 13em;
+}
+
+article{
+    font-family: 'Times New Roman', Times, serif;
+    margin: 30px;
+}
+
+article h3{
+    font-size: 300%;
+}
+
+article h4{
+    font-size: 200%;
+}
+
+article p{
+    font-size: 120%;
+}
+
+/*--------------PIE--------------*/
+
+.footer   {
+    background-color: rgb(0, 6, 24);
+    color: white;
+    border: 3px solid #bed3ff;
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
